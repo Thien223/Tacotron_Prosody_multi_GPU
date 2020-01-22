@@ -4,7 +4,7 @@ This repo is the implementation of Tacotron-2 model for Korean voice.
 ## Before starting:
 ### 1 - Download traindata from: https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset
 The downloaded folder has 4 subfolder named from 1~4. For simplicity, I remove subfolder and put all file in a folder called "wavs" - take a look at `Train_data_folder_structure.png`
-
+And in case of the dataset author changes the file format, I have captured the screenshoot of `transcript.txt` file format as `transcript_file_format.png`
 ### 2 - Download pretrained model: [will be upload and update soon]
 put downloaded pretrained model as structure as in `pretrained_folder_structure.PNG`
 
