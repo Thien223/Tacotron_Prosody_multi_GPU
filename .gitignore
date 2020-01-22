@@ -1,0 +1,11 @@
+.env
+.idea/
+Tacotron_input/
+Train_data*/
+Train_data/
+code_backup/
+tacotron_output/
+Tacotron_trained_logs
+nohup.out
+__pycache__/
+wavenet_output/

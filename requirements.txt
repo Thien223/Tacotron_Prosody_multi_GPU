@@ -1,0 +1,15 @@
+numpy
+torch
+pydub
+natsort
+tensorflow-gpu==1.9.0
+keras
+pyaudio
+scikit-learn
+unidecode
+inflect
+scipy
+librosa
+matplotlib
+tqdm
+lws
