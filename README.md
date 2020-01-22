@@ -1,6 +1,9 @@
 # Tacotron_Prosody_multi_GPU
 This repo is the implementation of Tacotron-2 model for Korean voice.
 
+#### For someone (like me) wanna check demo before go futher, I posted synthesized files in `samples` folder.
+
+
 ## Before starting:
 ### 1 - Download traindata from: https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset
 The downloaded folder has 4 subfolder named from 1~4. For simplicity, I remove subfolder and put all file in a folder called "wavs" - take a look at `Train_data_folder_structure.png`
