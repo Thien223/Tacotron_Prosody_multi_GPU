@@ -302,7 +302,7 @@ class DecoderRNN():
         scope: model scope
     '''
 
-    def __init__(self, is_training, layers=2, size=1024, zoneout=0.1, scope='decoder_rnn'):
+    def __init__(self, is_training, layers=2, size=256, zoneout=0.1, scope='decoder_rnn'):
         super(DecoderRNN, self).__init__()
         self.is_training = is_training
         self.layers = layers

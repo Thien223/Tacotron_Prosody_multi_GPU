@@ -17,6 +17,7 @@ class Embedding:
 		#Do the actual embedding
 		return tf.nn.embedding_lookup(self.embedding_table, inputs)
 
+
 class ReluActivation:
 	"""Simple class to wrap relu activation function in class for later call.
 	"""
@@ -41,7 +42,8 @@ class LeakyReluActivation:
 class Conv1d1x1(tf.layers.Conv1D):
 	"""Extend tf.layers.Conv1D for dilated layers convolutions.
 	"""
-	def __init__(self, in_channels, filters, kernel_size=1, padding=None, dilation=1, use_bias=True, name='Conv1d1x1'):
+	def __init__(self, in_channels, filters, kernel_size=1, padding=None, dilation=1, use_bias=True, name='Conv1d1x1', **kwargs):
+		super().__init__(filters, kernel_size, padding, use_bias, name, **kwargs)
 		with tf.variable_scope(name):
 			#Create variables
 			kernel_shape = (kernel_size, in_channels, filters)

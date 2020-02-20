@@ -1,4 +1,5 @@
 import tensorflow as tf
+from tensorflow.python.ops.rnn import bidirectional_dynamic_rnn
 
 class EncoderCell():
     """Encoder Cell
@@ -53,6 +54,7 @@ class EncoderLSTM():
             scope: network scope
         '''
 
+
     def __init__(self, is_training, size=256, zoneout=0.1, scope='encoder_lstm'):
         super(EncoderLSTM, self).__init__()
         self.is_training = is_training
@@ -65,7 +67,7 @@ class EncoderLSTM():
 
     def __call__(self, inputs, input_lengths):
         with tf.variable_scope(self.scope):
-            outputs, (fw_state, bw_state) = tf.nn.bidirectional_dynamic_rnn(
+            outputs, (fw_state, bw_state) = bidirectional_dynamic_rnn(
                 self.fw_cell,
                 self.bw_cell,
                 inputs,

@@ -60,7 +60,7 @@ hparams = tf.contrib.training.HParams(
     postnet_channels = 512,     #postnet convolution channels of each layer
     postnet_num_layers = 5,     #number of postnet convolutional layers
 	prenet_layers = [256, 256], #number of layers and number of units of prenet
-    decoder_lstm_units = 1024,
+    decoder_lstm_units = 256,
     #text preprocessing params
     hangul_type = 1,        #type of hangul conversion
     ##audio preprocessing params
@@ -70,7 +70,7 @@ hparams = tf.contrib.training.HParams(
     rescale=True,  # whether rescale audio data before processing
     rescaling_max = 0.999,    #max scaling (if rescale is true, this parameter will be used)
     trim_silence = True,        #whether trim out silent parts
-    sample_rate=22050, #22050, 44100
+    sample_rate=44100, #22050, 44100
     fmin=25,  # min of voice frequency
     fmax=7600,  # max of voice frequency
     min_level_db=-100,
