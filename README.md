@@ -5,6 +5,9 @@ This repo is the implementation of Tacotron-2 model for Korean voice.
 
 
 ## Before starting:
+### 0 - Requirement.txt install
+There are some requirement must be met to install requirements.txt some of them cannot be install via pip command, such as pyaudio -  download here https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and use `pip install *.whl` to install; such as pytorch - download here https://pytorch.org/ and install as home page instruction...
+
 ### 1 - Download traindata from: https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset
 The downloaded folder has 4 subfolder named from 1~4. For simplicity, I remove subfolder and put all file in a folder called "wavs" - take a look at `Train_data_folder_structure.png`
 And in case of the dataset author changes the file format, I have captured the screenshoot of `transcript.txt` file format as `transcript_file_format.png`
