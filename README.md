@@ -5,6 +5,8 @@ This repo is the implementation of Tacotron-2 model for Korean voice.
 
 
 ## Before starting:
+
+
 ### 0 - Requirement.txt install
 There are some requirement must be met to install requirements.txt some of them cannot be install via pip command:
  > such as pyaudio: download here https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and use `pip install *.whl` to install for windows, for linux: 
@@ -22,6 +24,13 @@ put downloaded pretrained model as structure as in `pretrained_folder_structure.
 ### 3 - install requirements: 
 open terminal (or cmd interface in Windows), activate virtual environment you wanna use, or use your system environment. If you do not know how to do, take a cup of coffee and visit https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 there are some packages will require some other apps or libraries (such as pyaudio), or could not installed using pip (such as pytorch), you need using Google to find out how to install them.
+
+### 4 - update slash symbol suitable for your OS: 
+
+In case you are using different OS from me, go to `Utils\AudioPreprocess\AudioPreprocess.py` file, edit the line `349` like this:
+
+		# folder_id = input_dir.split('/')[-1]  ### get speaker folder name (in linux)
+		folder_id = input_dir.split('\\')[-1]  ### get speaker folder name (in windows)
 
 ##Start Preprocessing process:
 
